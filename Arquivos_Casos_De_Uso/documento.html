@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Teste de Aceitação</title>
+	<style>
+		body {
+			background-color: #e6f1f7;
+			font-family: Arial, sans-serif;
+			color: #333;
+		}
+
+		h1 {
+			color: #1478c4;
+		}
+
+		table {
+			border-collapse: collapse;
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+
+		table, th, td {
+			border: 1px solid #1478c4;
+			padding: 10px;
+			text-align: center;
+		}
+
+		th {
+			background-color: #1478c4;
+			color: #fff;
+		}
+
+		tr:nth-child(even) {
+			background-color: #d9edf7;
+		}
+
+		tr:hover {
+			background-color: #bee5eb;
+		}
+
+		button {
+			background-color: #1478c4;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+		
+		button:hover {
+			background-color: #0f6ebd;
+		}
+	</style>
+</head>
+<body>
+	<h1>Testes de Aceitação - Netflix</h1>
+	<table >
+		<thead>
+			<tr>
+				<th>Código</th>
+				<th>Nome</th>
+				<th>Resumo</th>
+				<th>Automatizado (Sim/Não)</th>
+                <th>Pré-Condição</th>
+				<th>URL de Início da Interação</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>CT_001</td>
+				<td>Verificar se é possível visualizar a página principal da Netflix</td>
+				<td>Verificar se a página principal da Netflix é carregada corretamente</td>
+				<td>Sim</td>
+				<td>     O usuário deve estar na página principal da Netflix e o Navegador Chrome e pacote Selenium para Python instalado.  </td>
+                <td>https://www.netflix.com/</td>
+			</tr>
+			<tr >
+				<td>CT_002</td>
+				<td>Verificar elementos ativo na página inicial da Netflix</td>
+				<td>Verificar se os elementos ativos na pagina inicial estão ativos</td>
+				<td>Sim</td>
+                <td>Navegador Chrome e pacote Selenium para Python instalado.   </td>
+				<td>https://www.netflix.com/</td>
+			</tr>
+			<tr>
+				<td>CT_003</td>
+				<td>Verificar se é possível fazer login na Netflix com uma conta válida</td>
+				<td>Verificar se o usuário consegue fazer login na Netflix com uma conta de email e senha válidos</td>
+				<td>Sim</td>
+                <td>O usuário deve estar na página principal da Netflix e o Navegador Chrome e pacote Selenium para Python instalado.</td>
+				<td>https://www.netflix.com/</td>
+			</tr>
+			<tr>
+				<td>CT_004</td>
+				<td>Verificar se é possível procurar um título na Netflix</td>
+				<td>Verificar se é possível encontrar um título específico na Netflix usando o campo de busca</td>
+				<td>Sim</td>
+				<td>O usuário deve estar na página principal da Netflix e o Navegador Chrome e pacote Selenium para Python instalado.</td>
+                <td>https://www.netflix.com/</td>
+			</tr>
+			<tr>
+				<td>CT_005</td>    
+        <td>Pesquisa de Filme na Netflix</td>
+				<td>Teste de pesquisa de um filme na página da Netflix utilizando o XPath </td>
+				<td>Sim</td>
+				<td>O usuário deve estar na página principal da Netflix e o Navegador Chrome e pacote Selenium para Python instalado.</td>
+                <td>https://www.netflix.com/</td>
+			</tr>
+    <table>
+      <caption>Caso de Teste CT_001 - Verificar o título da página da Netflix</caption>
+      <thead>
+        <tr>
+          <th>Passo do Usuário</th>
+          <th>Passo do Sistema</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Acessar a página inicial da Netflix.</td>
+          <td>Se o título da página for exibido corretamente, exibir a mensagem: "Título da página da Netflix exibido corretamente: Netflix."</td>
+        </tr>
+        <tr>
+          <td>Verificar se o título da página é exibido corretamente como "Netflix".</td>
+          <td>Se o título da página não for exibido corretamente, exibir a mensagem: "ERRO: o título esperado da página da Netflix era 'Netflix', mas o título atual é {título atual da página}.".</td>
+        </tr>
+      </tbody>
+    </table>
+      
+ 
+    <table>
+      <caption>Caso de Teste CT_002 - Verificar elementos ativo na página inicial da Netflix</caption>
+      <thead>
+        <tr>
+          <th>Passo do Usuário</th>
+          <th>Passo do Sistema</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Acessa a URL de início da interação</td>
+          <td>Exibe a página inicial da Netflix</td>
+        </tr>
+        <tr>
+          <td>---</td>
+          <td>Usa o Selenium para obter o elemento ativo</td>
+        </tr>
+        <tr>
+          <td>---</td>
+          <td>Verifica se o elemento ativo é compativel</td>
+        </tr>
+        <tr>
+        <td>Verifica se o texto exibido corresponde ao campo de busca</td>
+            <td>  ---  </td>
+    </tr>
+    <tr>
+        <td>Fecha o navegador</td>
+            <td>  ---  </td>
+    </tr>
+       </tbody>
+    </table>
+      
+      </head>
+  <body>
+    <table>
+      <caption>Caso de Teste CT_003 - Login de Usuário</caption>
+      <thead>
+        <tr>
+          <th>Passo do Usuário</th>
+          <th>Passo do Sistema</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Usuário acessa a página de login</td>
+          <td>O sistema exibe o campo de email e senha</td>
+        </tr>
+        <tr>
+          <td>Usuário digita seu email</td>
+          <td>O sistema valida o email e habilita o campo de senha</td>
+        </tr>
+        <tr>
+          <td>Usuário digita sua senha</td>
+          <td>O sistema valida a senha e redireciona o usuário para a página inicial</td>
+        </tr>
+      </tbody>
+    </table>
+      
+      
+  
+    <table>
+      <caption>Caso de Teste CT_004 -Verificar se é possível procurar um título na Netflix</caption>
+      <thead>
+        <tr>
+          <th>Passo do Usuário</th>
+          <th>Passo do Sistema</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>O usuário clica na barra de pesquisa</td>
+          <td>O sistema exibe um campo de busca</td>
+        </tr>
+        <tr>
+          <td>O usuário digita o nome do filme "Harry Potter" no campo de busca</td>
+          <td>O sistema sugere resultados à medida que o usuário digita</td>
+        </tr>
+        <tr>
+          <td>O usuário seleciona o filme "Harry Potter e a Pedra Filosofal"</td>
+          <td>O sistema exibe a página do filme</td>
+        </tr>
+        <tr>
+        <td>O usuário verifica se o nome do filme exibido na página é "Harry Potter e a Pedra Filosofal"</td>
+        <td>O sistema exibe o nome do filme na página</td>
+        </tr>
+      </tbody>
+    </table>
+      
+   
+    <table>
+      <caption>Caso de Teste CT_005 -Buscar um filme na Netflix pelo atributo 'src' da imagem</caption>
+      <thead>
+        <tr>
+          <th>Passo do Usuário</th>
+          <th>Passo do Sistema</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>O usuário digita "Netflix" na barra de pesquisa do navegador e pressiona Enter.</td>
+          <td>O sistema redireciona para a página inicial da Netflix.</td>
+        </tr>
+        <tr>
+          <td>O usuário clica na caixa de pesquisa da Netflix.</td>
+          <td>O sistema habilita a caixa de pesquisa.</td>
+        </tr>
+        <tr>
+          <td>O usuário digita "Escobar: A Traição" na caixa de pesquisa e pressiona Enter.</td>
+          <td>O sistema valida a senha e redireciona o usuário para a página inicial</td>
+        </tr>
+        <td>O usuário clica no filme "Escobar: A Traição" nos resultados.</td>
+        <td>O sistema exibe a página do filme "Escobar: A Traição".</td>
+      </tr>
+      <td>O usuário verifica se a página exibida é a página do filme</td>
+      <td>O sistema exibe a página correta do filme "Escobar: A Traição</td>
+    </tr>
+  </tr>
+  <td>O usuário finaliza o teste.</td>
+  <td>O teste deve passar sem falhas. O título "Escobar: A Traição" deve ser exibido corretamente na página do título e deve ser reproduzido corretamente ao clicar no botão "Play".
+  </td>
+</tr>
+                </tbody>
+            </table>
+        </body>
+    </html>

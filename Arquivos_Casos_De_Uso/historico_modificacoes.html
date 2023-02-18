@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Histórico de modificações em testes</title>
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		table {
+			width: 100%;
+			border-collapse: collapse;
+		}
+
+		th, td {
+			padding: 10px;
+			text-align: left;
+			border-bottom: 1px solid #ddd;
+		}
+
+		th {
+			background-color: #f2f2f2;
+		}
+
+		tr:hover {
+			background-color: #f5f5f5;
+		}
+
+		.tab {
+			overflow: hidden;
+			border: 1px solid #ccc;
+			background-color: #f1f1f1;
+		}
+
+		.tab button {
+			background-color: inherit;
+			float: left;
+			border: none;
+			outline: none;
+			cursor: pointer;
+			padding: 14px 16px;
+			transition: 0.3s;
+			font-size: 17px;
+		}
+
+		.tab button:hover {
+			background-color: #ddd;
+		}
+
+		.tab button.active {
+			background-color: #ccc;
+		}
+	</style>
+</head>
+<body>
+	<div class="tab">
+		<button class="tablinks active" onclick="openTab(event, 'versoes')">Versões</button>
+		<button class="tablinks" onclick="openTab(event, 'data')">Data</button>
+		<button class="tablinks" onclick="openTab(event, 'responsavel')">Responsável</button>
+	</div>
+
+	<table id="versoes">
+		<thead>
+			<tr>
+				<th>Versão</th>
+				<th>Descrição</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1.0</td>
+				<td>Primeira versão</td>
+			</tr>
+			<tr>
+				<td>1.1</td>
+				<td>Correção de bugs</td>
+			</tr>
+			<tr>
+				<td>1.2</td>
+				<td>Adição de novos testes</td>
+			</tr>
+		</tbody>
+	</table>
+	
+	<table id="data" style="display:none">
+		<thead>
+			<tr>
+				<th>Data</th>
+				<th>Descrição</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>16/02/2023</td>
+				<td>Primeira versão</td>
+			</tr>
+			<tr>
+				<td>17/02/2023</td>
+				<td>Correção de bugs</td>
+			</tr>
+			<tr>
+				<td>18/02/2023</td>
+				<td>Adição de novos testes</td>
+			</tr>
+		</tbody>
+	</table>
+	
+	<table id="responsavel" style="display:inside">
+		<thead>
+			<tr>
+				<th>Responsável</th>
+                <th>Responsável</th>
+                <th>Responsável</th>
+                <th>Responsável</th>
+                
+				
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Guilherme</td>
+                <td>João Gabriel</td>
+                <td>Gabriel Santana</td>
+                <td>Heyder Veras</td>
+				
